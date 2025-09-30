@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double opcion;
+            do
+            {
+                Console.WriteLine("1.Calcular suma \n2.Calcular resta \n3.Salir");
+                Console.Write("Ingrese su opccion: ");
+                opcion = Convert.ToDouble(Console.ReadLine());
+                if (opcion !=1 && opcion!=2 && opcion!=3)
+                {
+                    Console.WriteLine("Opcion no valida....\nIntente de nuevo...");
+                }
+                else
+                {
+                        Console.WriteLine("Opcion valida, saliste del bucle :D");
+                }
+            }while (opcion!=1 && opcion!=2 && opcion!=3);
+        }
+    }
+}
