@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador = 0;
+            double sumatotal = 0;
+            double notas;
+            do
+            {
+                Console.Write("Ingrese sus notas: ");
+                notas = Convert.ToDouble(Console.ReadLine());
+                if (notas != -1)
+                {
+                    sumatotal += notas;
+                    contador++;
+                }
+            }while (notas != -1);
+            if (contador > 0)
+            {
+                double promedio = sumatotal / contador;
+                Console.WriteLine($"La suma total es: {sumatotal} ");
+                Console.WriteLine($"La cantidad de notas ingesadas es: {contador}");
+                Console.WriteLine($"El promedio de notas es: {promedio}");
+            }
+            else
+            {
+                Console.WriteLine("Numeros no validos, intente de nuevo...");
+            }
+        }
+    }
+}
